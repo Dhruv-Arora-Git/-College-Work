@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      function fnClick() {
+        let n1 = document.getElementById("n1").value;
+        let n2 = document.getElementById("n2").value;
+        let r = n1 % n2;
+        let d = Math.floor(n1 / n2);
+        document.getElementById("p1").innerHTML = "Divided balls are: " + d;
+        document.getElementById("p2").innerHTML = "Remaining balls are: " + r;
+        //if (n1%2==0){
+        //  document.getElementById("p1").innerHTML ="Even Number";
+        //}
+        //else{
+        //  document.getElementById("p1").innerHTML="Odd Number";
+        //}
+        //   let count=0;
+        // for(let i=2;i<=n1/2;i++){
+        //    if(n1%2==0){
+        //       count+=1;
+        //}
+        //}
+        // if(count>=1){
+        //   document.getElementById("p1").innerHTML ="Not a prime Number";
+        //}
+        // else{
+        //   document.getElementById("p1").innerHTML ="Is a prime Number";
+        //}
+        // document.getElementById("p1").innerHTML = Boolean(10>9);
+        // alert("Hi, How are you?");
+        //var n1="A";
+        //var n1="6";
+        // var n1 = document.getElementById("n1").value;
+        //var n2 = document.getElementById("n2").value;
+
+        // if(!isNaN(n1) && !isNaN(n2)){
+
+        //   n1=Number(n1);
+        // n2=Number(n2);
+        // console.log(n1);
+        //  document.getElementById("p1").innerHTML=(n1+n2);
+        //}
+        // else{
+        //document.getElementById("p1").innerHTML=
+        //"<span style='color:red'>Please enter numeric value.</span>";
+        // }
+        // alert(isNaN);
+        //n1=Number(n1);
+        // n2=Number(n2);
+        // document.getElementById("p1").innerHTML= "<n1 + n2";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- N1 <input type="text" name="n1" id="n1" /><br />
+    N2 <input type="text" name="n2" id="n2" /><br />-->
+    <input type="text" name="n1" id="n1" />
+    <input type="text" name="n2" id="n2" />
+    <button onclick="fnClick()">Click</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+  </body>
+</html>
