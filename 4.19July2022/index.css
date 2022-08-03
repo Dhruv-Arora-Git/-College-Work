@@ -1,0 +1,25 @@
+body {
+  background: linear-gradient(
+    to top,
+    rgb(204, 229, 255),
+    rgba(204, 229, 255, 0.4)
+  );
+  font-size: 1.15em;
+  text-align: justify;
+}
+
+#myTitle {
+  color: red;
+}
+
+#krsna {
+    width: 1000px;
+}
+
+.h1Element {
+  color: chartreuse;
+}
+
+h1 {
+  color: blue;
+}
