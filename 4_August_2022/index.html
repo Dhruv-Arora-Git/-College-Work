@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4 August</title>
     <script>
+      /*
       const fnSum = function () {
         const eleText = document.getElementById("input-num").value;
         // alert(eleText);
@@ -19,17 +20,60 @@
             for (let i = 2; i < num; ++i) {
               if (i % 2 == 0) sum += i;
             }
-            
+
             alert("Sum is: " + sum);
           } else {
             alert("Enter a valid Number that is not NaN");
           }
         }
       };
+    */
+
+      const calc = function () {
+        const left = document.getElementById("l").value;
+        const right = document.getElementById("r").value;
+        const k = document.getElementById("k").value;
+
+        let sum = 0,
+          rightVal,
+          leftVal,
+          div;
+
+        if (left.trim() == "" || left == null || isNaN(Number(left))) {
+          alert("Enter a valid left Number");
+        } else {
+          leftVal = Number(left);
+        }
+
+        if (right.trim() == "" || right == null || isNaN(Number(right))) {
+          alert("Enter a valid right Number");
+        } else {
+          rightVal = Number(right);
+        }
+
+        if (k.trim() == "" || k == null || isNaN(Number(k))) {
+          alert("Enter a valid dividend Number");
+        } else {
+          div = Number(k);
+        }
+
+        for (let i = leftVal; i <= rightVal; ++i) {
+          if (i % div == 0) ++sum;
+        }
+        alert("Total nums: " + sum);
+      };
     </script>
   </head>
   <body>
-    <input id="input-num" type="text" />
-    <button onclick="fnSum()">Calculate</button>
+    <!-- <input id="input-num" type="text" />
+    <button onclick="fnSum()">Calculate</button> -->
+
+    <input id="l" type="text" placeholder="l" />
+    <br />
+    <input id="r" type="text" placeholder="r" />
+    <br />
+    <input id="k" type="text" placeholder="k" />
+    <br />
+    <button id="btn" onclick="calc()">Click</button>
   </body>
 </html>
