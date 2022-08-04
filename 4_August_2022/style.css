@@ -1,0 +1,11 @@
+#box {
+    height: 250px;
+    width: 250px;
+    color: red;
+    background-color: yellow;
+    transition-duration: 1s;
+}
+
+#txt {
+    transition-duration: 1s;
+}

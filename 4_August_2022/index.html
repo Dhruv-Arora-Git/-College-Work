@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4 August</title>
+    <link rel="stylesheet" href="./style.css">
     <script>
       /*
       const fnSum = function () {
@@ -28,7 +29,7 @@
         }
       };
     */
-
+      /*
       const calc = function () {
         const left = document.getElementById("l").value;
         const right = document.getElementById("r").value;
@@ -62,18 +63,39 @@
         }
         alert("Total nums: " + sum);
       };
+      */
+
     </script>
   </head>
   <body>
     <!-- <input id="input-num" type="text" />
     <button onclick="fnSum()">Calculate</button> -->
 
-    <input id="l" type="text" placeholder="l" />
+    <!-- <input id="l" type="text" placeholder="l" />
     <br />
     <input id="r" type="text" placeholder="r" />
     <br />
     <input id="k" type="text" placeholder="k" />
     <br />
-    <button id="btn" onclick="calc()">Click</button>
+    <button id="btn" onclick="calc()">Click</button> -->
+
+    <div id="box">
+        <p id="txt">Hare Krishna</p> 
+    </div>
+    <button id="btn-circle">Change it!</button>
+    <script>
+        const btnCircle = document.getElementById("btn-circle");
+
+        btnCircle.addEventListener('click', ()=> {
+            
+            const div = document.getElementById("box");
+            div.style.borderRadius = "125px";
+
+            const text = document.getElementById("txt");
+            text.style.color = "blue";
+            text.style.paddingTop = "50%";
+            text.style.textAlign = "center";
+        });
+    </script>
   </body>
 </html>
