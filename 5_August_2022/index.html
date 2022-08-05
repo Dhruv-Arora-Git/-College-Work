@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre id="oddNo"></pre>
+
+    <script>
+      const isodd = function (number) {
+        return number % 2 != 0;
+      };
+
+      const filter = function (numbers, callBack) {
+        let results = [];
+        for (const number of numbers) {
+          if (callBack(number)) {
+            results.push(number);
+          }
+        }
+        return results;
+      };
+
+      let nums = [2, 8, 54, 3, 9, 10, 11, 13, 19];
+
+      let oddNums = filter(nums, isodd);
+
+      document.getElementById("oddNo").innerHTML = oddNums;
+    </script>
+  </body>
+</html>
