@@ -3,7 +3,6 @@ const changeButton = document.getElementById("change-btn");
 const inputBox = document.getElementById("input-txt");
 const toggleButton = document.getElementById("toggle");
 const toggler = document.getElementsByClassName("indicator")[0];
-const krsnaImg = document.getElementById("krsna-img");
 const body = document.querySelector("body");
 const heading = document.querySelector("h1");
 const welcome = document.getElementById("welcome");
@@ -18,7 +17,6 @@ let txt,
   flag = false;
 
 const toggleBtnStyle = function () {
-  console.log(iter);
   if (flag == true) {
     if (iter & 1) {
       toggler.style.left = "35px";
@@ -54,6 +52,7 @@ const boxStyles = function () {
   box.style.transitionDuration = "1s";
   one.style.transitionDuration = "1s";
   two.style.transitionDuration = "1s";
+
   flag = true;
   let num = Number(txt);
 
@@ -67,7 +66,7 @@ const boxStyles = function () {
   }
 
   const avg = sum / 5;
-  console.log(sum, avg);
+
   box.style.height = sum + "px";
   box.style.width = sum + "px";
   box.style.borderRadius = avg + "px";
@@ -86,9 +85,8 @@ const boxStyles = function () {
 };
 
 changeButton.addEventListener("click", () => {
-  console.log("Hare Krishna");
   txt = inputBox.value;
-  console.log(txt);
+
   if (txt.trim() == "" || txt.length != 5 || isNaN(Number(txt))) {
     alert("Please enter correct value");
     return;
@@ -97,7 +95,6 @@ changeButton.addEventListener("click", () => {
 });
 
 toggleButton.addEventListener("click", () => {
-  console.log("togglllleee");
   ++iter;
   toggleBtnStyle(iter);
 });
