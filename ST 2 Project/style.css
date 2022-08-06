@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top right, #363682 0%, #2ebf85 100%);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+h1 {
+  font-size: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+#welcome {
+  font-size: 50px;
+  transition: all 1s ease-in-out;
+}
+#thank-you {
+  font-size: 0px;
+  transition: all 1s ease-in-out;
+}
+
+#input-txt {
+  margin-top: 50px;
+  height: 70px;
+  width: 500px;
+  font-size: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#change-btn {
+  margin-top: 15px;
+  color: wheat;
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-image 1s ease-in;
+
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+#change-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+#change-btn:focus {
+  outline: none;
+}
+
+.shape-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 20px;
+  background-image: linear-gradient(to top right, #2ebf85 0%, #363682 100%);
+
+  box-shadow: 0 1.75rem 3.5rem rgba(31, 30, 30, 0.75);
+  display: none;
+}
+
+.one {
+  transition: all 1s;
+  position: fixed;
+  margin-top: 25%;
+  margin-left: 30%;
+  background-image: linear-gradient(to top right, #2ebf85 0%, #363682 100%);
+  box-shadow: 0 1.75rem 3.5rem rgba(31, 30, 30, 0.75);
+  opacity: 0;
+  transition: opacity 1s ease-in height 0.5s width 0.5s;
+}
+
+.two {
+  position: fixed;
+  margin-top: 25%;
+  margin-right: 30%;
+  background-image: linear-gradient(to top right, #2ebf85 0%, #363682 100%);
+  box-shadow: 0 1.75rem 3.5rem rgba(31, 30, 30, 0.75);
+  opacity: 0;
+  transition: opacity 1s ease-in height 0.5s width 0.5s;
+}
+
+#smile {
+  opacity: 0;
+  transition: opacity 0.5s ease-in height 0.5s width 0.5s;
+  height: 0px;
+  width: 0px;
+  margin-top: 150px;
+}
+
+#toggle {
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  transition: 0.5s;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgb(149, 143, 143), rgb(55, 50, 50));
+  transition: scale(0.9);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(0, 0, 0, 0.2), inset 0 -4px 4px rgba(0, 0, 0, 0.2);
+}
