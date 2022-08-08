@@ -88,7 +88,7 @@ changeButton.addEventListener("click", () => {
   txt = inputBox.value;
 
   if (txt.trim() == "" || txt.length != 5 || isNaN(Number(txt))) {
-    alert("Please enter correct value");
+    alert("Error! \nPlease enter a Number of 5 Digits only");
     return;
   }
   boxStyles();
