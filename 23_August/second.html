@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <input type="text" name="n1" id="n1" placeholder="Enter a number" />
+    <button onclick="myFn()">Click</button>
+    <p id="err"></p>
+    <p id="demo"></p>
+    <script>
+      function myFn() {
+        function numberCal() {
+          let a = document.getElementById("n1").value;
+          if (!isNaN(a)) {
+            a = Number(a);
+            if (a < 18) {
+              throw "Its too low";
+            }
+            if (a > 60) {
+              throw "Its too high";
+            } else {
+              alert("Its Valid");
+            }
+          } else {
+            alert("It is not a number");
+          }
+        }
+
+        try {
+          numberCal();
+        } catch (err) {
+          document.getElementById("err").innerHTML = err;
+        }
+      }
+    </script>
+  </body>
+</html>
